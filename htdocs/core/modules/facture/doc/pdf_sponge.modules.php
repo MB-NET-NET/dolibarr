@@ -1446,7 +1446,7 @@ class pdf_sponge extends ModelePDFFactures
 
 						$pdf->SetXY($qrPosX + 30, $posy + 5);
 						$pdf->SetFont('', '', $default_font_size - 5);
-						$pdf->MultiCell(30, 3, $outputlangs->trans("INVOICE_ADD_EPC_QR_CODEPay"), 0, 'L', 0);
+						$pdf->MultiCell(30, 3, $outputlangs->transnoentitiesnoconv("INVOICE_ADD_EPC_QR_CODEPay"), 0, 'L', 0);
 						$posy = $pdf->GetY() + 2;
 					}
 				}
