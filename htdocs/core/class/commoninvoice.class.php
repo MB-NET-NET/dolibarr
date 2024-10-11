@@ -1681,10 +1681,10 @@ abstract class CommonInvoice extends CommonObject
 			$bankAccount->fetch($this->fk_account);
 			$lines[] = $bankAccount->bic; //BIC (required)
 			if ($bankAccount->owner_name) {
-			    $lines[] = $bankAccount->owner_name; //Owner of bank account, if present (required)
+				$lines[] = $bankAccount->owner_name; //Owner of bank account, if present (required)
 			} else {
-			    $lines[] = $mysoc->name; //Use company name instead (required)
-		        }
+				$lines[] = $mysoc->name; //Use company name instead (required)
+			}
 			$lines[] = $bankAccount->iban; //IBAN (required)
 		} else {
 			$lines[] = ""; //BIC (required)
