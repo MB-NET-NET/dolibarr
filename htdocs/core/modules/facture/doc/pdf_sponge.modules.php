@@ -2521,6 +2521,7 @@ class pdf_sponge extends ModelePDFFactures
 					$pdf->MultiCell($w, 3, $outputlangs->transnoentities("ErrorGoToGlobalSetup"), 0, 'L');
 				}
 			} else {
+				$pdf->SetFont('', 'B', $default_font_size * 2);
 				$text = $this->emetteur->name;
 				$pdf->MultiCell($w, 4, $outputlangs->convToOutputCharset($text), 0, $ltrdirection);
 			}
